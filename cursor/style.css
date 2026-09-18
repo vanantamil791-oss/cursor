@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 15%, #071633 0%, #01040d 75%);
+  touch-action: none;
+  font-family: system-ui, sans-serif;
+}
+ 
+.title {
+  position: fixed;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #cfe9ff;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 14px rgba(80, 170, 255, 0.7);
+  pointer-events: none;
+  z-index: 20;
+  text-align: center;
+  width: 90%;
+}
+ 
+.hint {
+  position: fixed;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #6fa6d9;
+  font-size: 13px;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 20;
+}
+ 
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+}
+ 
+/* glowing dragon head that leads the tail */
+.dragon-head {
+  position: fixed;
+  width: 30px;
+  height: 22px;
+  clip-path: polygon(0% 15%, 60% 15%, 60% 0%, 100% 50%, 60% 100%, 60% 85%, 0% 85%, 25% 50%);
+  background: linear-gradient(90deg, #dff5ff, #6fd2ff 40%, #1c6fe0 80%, #0d2f8a 100%);
+  box-shadow:
+    0 0 14px rgba(90, 190, 255, 0.9),
+    0 0 30px rgba(30, 120, 255, 0.6);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
